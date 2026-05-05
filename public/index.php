@@ -103,27 +103,27 @@ $jam_str = $now->format('H:i');
 <!DOCTYPE html>
 <html lang="id">
 
-<?php include 'partials/head.php'; ?>
+<?php include __DIR__ . '/partials/head.php'; ?>
 
 <body>
-    <?php include 'partials/modal.php'; ?>
-    <?php include 'partials/background.php'; ?>
+    <?php include __DIR__ . '/partials/modal.php'; ?>
+    <?php include __DIR__ . '/partials/background.php'; ?>
 
     <div class="app">
-        <?php include 'partials/topbar.php'; ?>
+        <?php include __DIR__ . '/partials/topbar.php'; ?>
 
         <div class="mid">
-            <?php include 'partials/current-weather.php'; ?>
+            <?php include __DIR__ . '/partials/current-weather.php'; ?>
             <div class="vdiv"></div>
-            <?php include 'partials/details.php'; ?>
+            <?php include __DIR__ . '/partials/details.php'; ?>
             <div class="vdiv"></div>
-            <?php include 'partials/hourly.php'; ?>
+            <?php include __DIR__ . '/partials/hourly.php'; ?>
         </div>
 
-        <?php include 'partials/weekly.php'; ?>
+        <?php include __DIR__ . '/partials/weekly.php'; ?>
     </div>
 
-    <?php include 'partials/scripts.php'; ?>
+    <?php include __DIR__ . '/partials/scripts.php'; ?>
 </body>
 
 </html>

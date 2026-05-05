@@ -40,8 +40,19 @@ class BackgroundSet
         
         $key = "{$periode}_{$cuaca}";
         
-        // Kembalikan URL dari .env jika ada, atau default pagi cerah
-        return $this->backgrounds[$key] ?? $this->backgrounds['PAGI_CERAH'] ?? '';
+        // Cek di internal array (dari .env)
+        if (isset($this->backgrounds[$key])) {
+            return $this->backgrounds[$key];
+        }
+
+        // Cek di system environment (untuk Vercel Dashboard)
+        $envValue = getenv($key);
+        if ($envValue) {
+            return $envValue;
+        }
+
+        // Fallback
+        return $this->backgrounds['PAGI_CERAH'] ?? getenv('PAGI_CERAH') ?? '';
     }
 
     /**
