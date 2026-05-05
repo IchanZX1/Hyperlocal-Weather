@@ -1,0 +1,287 @@
+CURL -X GET https://api-faa.my.id/faa/cuaca?kabupaten=Jember&kecamatan=sumbersari&desa=mastrip
+response : {
+  "status": true,
+  "creator": "Faa",
+  "lokasi": {
+    "kabupaten": "Jember",
+    "kecamatan": "sumbersari",
+    "desa": "mastrip",
+    "lat": -8.1725597,
+    "lon": 113.7188119,
+    "timezone": "Asia/Jakarta"
+  },
+  "prediksi_harian": {
+    "ringkas": "Cerah atau berawan sepanjang hari.",
+    "detail": "Tidak ada tanda hujan signifikan.",
+    "informasi": {
+      "rata_rata_peluang": "22%",
+      "total_hujan_mm": 0.1
+    }
+  },
+  "cuaca": [
+    {
+      "time_local": "2026-05-05 14:00",
+      "jam": "14:00",
+      "tanggal": "2026-05-05",
+      "hour": 14,
+      "utc": "2026-05-05T07:00:00Z",
+      "symbol": "partlycloudy_day",
+      "rain_mm": 0,
+      "peluang_hujan": 44,
+      "instant": {
+        "air_pressure_at_sea_level": 1007.8,
+        "air_temperature": 32,
+        "cloud_area_fraction": 67.2,
+        "relative_humidity": 56.1,
+        "wind_from_direction": 245.8,
+        "wind_speed": 2.2
+      },
+      "isNight": false,
+      "momentObj": "2026-05-05T07:00:00.000Z",
+      "emoji": "🌤️",
+      "deskripsi": "Berawan dengan potensi hujan ringan"
+    },
+    {
+      "time_local": "2026-05-05 15:00",
+      "jam": "15:00",
+      "tanggal": "2026-05-05",
+      "hour": 15,
+      "utc": "2026-05-05T08:00:00Z",
+      "symbol": "partlycloudy_day",
+      "rain_mm": 0,
+      "peluang_hujan": 53,
+      "instant": {
+        "air_pressure_at_sea_level": 1007.8,
+        "air_temperature": 31.5,
+        "cloud_area_fraction": 77.3,
+        "relative_humidity": 57.6,
+        "wind_from_direction": 200.1,
+        "wind_speed": 2
+      },
+      "isNight": false,
+      "momentObj": "2026-05-05T08:00:00.000Z",
+      "emoji": "🌤️",
+      "deskripsi": "Berawan dengan potensi hujan ringan"
+    },
+    {
+      "time_local": "2026-05-05 16:00",
+      "jam": "16:00",
+      "tanggal": "2026-05-05",
+      "hour": 16,
+      "utc": "2026-05-05T09:00:00Z",
+      "symbol": "partlycloudy_day",
+      "rain_mm": 0,
+      "peluang_hujan": 55,
+      "instant": {
+        "air_pressure_at_sea_level": 1008,
+        "air_temperature": 30.8,
+        "cloud_area_fraction": 70.3,
+        "relative_humidity": 60.8,
+        "wind_from_direction": 171.3,
+        "wind_speed": 2.4
+      },
+      "isNight": false,
+      "momentObj": "2026-05-05T09:00:00.000Z",
+      "emoji": "🌤️",
+      "deskripsi": "Berawan dengan potensi hujan ringan"
+    },
+    {
+      "time_local": "2026-05-05 17:00",
+      "jam": "17:00",
+      "tanggal": "2026-05-05",
+      "hour": 17,
+      "utc": "2026-05-05T10:00:00Z",
+      "symbol": "partlycloudy_night",
+      "rain_mm": 0.1,
+      "peluang_hujan": 42,
+      "instant": {
+        "air_pressure_at_sea_level": 1008.4,
+        "air_temperature": 29.2,
+        "cloud_area_fraction": 75.8,
+        "relative_humidity": 74.7,
+        "wind_from_direction": 171.3,
+        "wind_speed": 2.5
+      },
+      "isNight": true,
+      "momentObj": "2026-05-05T10:00:00.000Z",
+      "emoji": "🌤️",
+      "deskripsi": "Berawan dengan potensi hujan ringan (Malam)"
+    },
+    {
+      "time_local": "2026-05-05 18:00",
+      "jam": "18:00",
+      "tanggal": "2026-05-05",
+      "hour": 18,
+      "utc": "2026-05-05T11:00:00Z",
+      "symbol": "partlycloudy_night",
+      "rain_mm": 0,
+      "peluang_hujan": 20,
+      "instant": {
+        "air_pressure_at_sea_level": 1008.9,
+        "air_temperature": 27.8,
+        "cloud_area_fraction": 79.7,
+        "relative_humidity": 77.6,
+        "wind_from_direction": 140.5,
+        "wind_speed": 3.6
+      },
+      "isNight": true,
+      "momentObj": "2026-05-05T11:00:00.000Z",
+      "emoji": "☀️",
+      "deskripsi": "Cerah / Berawan (Malam)"
+    },
+    {
+      "time_local": "2026-05-05 19:00",
+      "jam": "19:00",
+      "tanggal": "2026-05-05",
+      "hour": 19,
+      "utc": "2026-05-05T12:00:00Z",
+      "symbol": "partlycloudy_night",
+      "rain_mm": 0,
+      "peluang_hujan": 4,
+      "instant": {
+        "air_pressure_at_sea_level": 1009.8,
+        "air_temperature": 27.1,
+        "cloud_area_fraction": 77.3,
+        "relative_humidity": 79.8,
+        "wind_from_direction": 124,
+        "wind_speed": 4.4
+      },
+      "isNight": true,
+      "momentObj": "2026-05-05T12:00:00.000Z",
+      "emoji": "☀️",
+      "deskripsi": "Cerah / Berawan (Malam)"
+    },
+    {
+      "time_local": "2026-05-05 20:00",
+      "jam": "20:00",
+      "tanggal": "2026-05-05",
+      "hour": 20,
+      "utc": "2026-05-05T13:00:00Z",
+      "symbol": "partlycloudy_night",
+      "rain_mm": 0,
+      "peluang_hujan": 0,
+      "instant": {
+        "air_pressure_at_sea_level": 1010.6,
+        "air_temperature": 26.4,
+        "cloud_area_fraction": 67.2,
+        "relative_humidity": 83.1,
+        "wind_from_direction": 117.7,
+        "wind_speed": 4.2
+      },
+      "isNight": true,
+      "momentObj": "2026-05-05T13:00:00.000Z",
+      "emoji": "☀️",
+      "deskripsi": "Cerah / Berawan (Malam)"
+    },
+    {
+      "time_local": "2026-05-05 21:00",
+      "jam": "21:00",
+      "tanggal": "2026-05-05",
+      "hour": 21,
+      "utc": "2026-05-05T14:00:00Z",
+      "symbol": "partlycloudy_night",
+      "rain_mm": 0,
+      "peluang_hujan": 0,
+      "instant": {
+        "air_pressure_at_sea_level": 1011,
+        "air_temperature": 26.1,
+        "cloud_area_fraction": 85.9,
+        "relative_humidity": 83.2,
+        "wind_from_direction": 120.1,
+        "wind_speed": 4
+      },
+      "isNight": true,
+      "momentObj": "2026-05-05T14:00:00.000Z",
+      "emoji": "☀️",
+      "deskripsi": "Cerah / Berawan (Malam)"
+    },
+    {
+      "time_local": "2026-05-05 22:00",
+      "jam": "22:00",
+      "tanggal": "2026-05-05",
+      "hour": 22,
+      "utc": "2026-05-05T15:00:00Z",
+      "symbol": "fair_night",
+      "rain_mm": 0,
+      "peluang_hujan": 0,
+      "instant": {
+        "air_pressure_at_sea_level": 1011.3,
+        "air_temperature": 25.6,
+        "cloud_area_fraction": 28.9,
+        "relative_humidity": 84.9,
+        "wind_from_direction": 254.3,
+        "wind_speed": 3.2
+      },
+      "isNight": true,
+      "momentObj": "2026-05-05T15:00:00.000Z",
+      "emoji": "☀️",
+      "deskripsi": "Cerah / Berawan (Malam)"
+    },
+    {
+      "time_local": "2026-05-05 23:00",
+      "jam": "23:00",
+      "tanggal": "2026-05-05",
+      "hour": 23,
+      "utc": "2026-05-05T16:00:00Z",
+      "symbol": "partlycloudy_night",
+      "rain_mm": 0,
+      "peluang_hujan": 0,
+      "instant": {
+        "air_pressure_at_sea_level": 1011.5,
+        "air_temperature": 25.1,
+        "cloud_area_fraction": 43,
+        "relative_humidity": 88,
+        "wind_from_direction": 259.1,
+        "wind_speed": 2.5
+      },
+      "isNight": true,
+      "momentObj": "2026-05-05T16:00:00.000Z",
+      "emoji": "☀️",
+      "deskripsi": "Cerah / Berawan (Malam)"
+    },
+    {
+      "time_local": "2026-05-06 00:00",
+      "jam": "00:00",
+      "tanggal": "2026-05-06",
+      "hour": 0,
+      "utc": "2026-05-05T17:00:00Z",
+      "symbol": "fair_night",
+      "rain_mm": 0,
+      "peluang_hujan": 0,
+      "instant": {
+        "air_pressure_at_sea_level": 1010.9,
+        "air_temperature": 24.9,
+        "cloud_area_fraction": 14.8,
+        "relative_humidity": 89.9,
+        "wind_from_direction": 260.5,
+        "wind_speed": 2.2
+      },
+      "isNight": true,
+      "momentObj": "2026-05-05T17:00:00.000Z",
+      "emoji": "☀️",
+      "deskripsi": "Cerah / Berawan (Malam)"
+    },
+    {
+      "time_local": "2026-05-06 01:00",
+      "jam": "01:00",
+      "tanggal": "2026-05-06",
+      "hour": 1,
+      "utc": "2026-05-05T18:00:00Z",
+      "symbol": "clearsky_night",
+      "rain_mm": 0,
+      "peluang_hujan": 0,
+      "instant": {
+        "air_pressure_at_sea_level": 1010.3,
+        "air_temperature": 24.4,
+        "cloud_area_fraction": 10.2,
+        "relative_humidity": 91.9,
+        "wind_from_direction": 250.5,
+        "wind_speed": 2.1
+      },
+      "isNight": true,
+      "momentObj": "2026-05-05T18:00:00.000Z",
+      "emoji": "☀️",
+      "deskripsi": "Cerah / Berawan (Malam)"
+    }
+  ]
+}
