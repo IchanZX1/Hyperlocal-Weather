@@ -11,7 +11,7 @@ $desa = $_GET['desa'] ?? 'Mastrip';
 
 $weatherResponse = $controller->getWeatherByLocation($kab, $kec, $desa);
 
-if ($weatherResponse['status'] === true) {
+if (is_array($weatherResponse) && isset($weatherResponse['status']) && $weatherResponse['status'] === true) {
     $loc = $weatherResponse['lokasi'];
     $forecasts = $weatherResponse['cuaca'];
     $current = $forecasts[0];
@@ -65,7 +65,8 @@ if ($weatherResponse['status'] === true) {
         }
     }
 } else {
-    die("Data tidak tersedia: Lokasi tidak ditemukan atau API bermasalah.");
+    $errorMessage = $weatherResponse['error'] ?? $weatherResponse['message'] ?? 'Lokasi tidak ditemukan atau API bermasalah.';
+    die("Data tidak tersedia: " . htmlspecialchars($errorMessage));
 }
 
 function getPeriode($hour)

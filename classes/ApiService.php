@@ -38,16 +38,29 @@ class ApiService
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36");
-        // curl_setopt($ch, CURLOPT_CAINFO, 'C:\laragon\bin\php\php-8.2.30-Win32-vs16-x64\cacert.pem');
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 
         $response = curl_exec($ch);
 
         if (curl_errno($ch)) {
-            throw new Exception("Curl Error: " . curl_error($ch));
+            $error_msg = curl_error($ch);
+            curl_close($ch);
+            throw new Exception("Curl Error: " . $error_msg);
         }
 
         curl_close($ch);
 
-        return json_decode($response, true);
+        if (empty($response)) {
+            throw new Exception("API returned an empty response.");
+        }
+
+        $decoded = json_decode($response, true);
+        
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            throw new Exception("JSON Decode Error: " . json_last_error_msg());
+        }
+
+        return $decoded;
     }
 }
