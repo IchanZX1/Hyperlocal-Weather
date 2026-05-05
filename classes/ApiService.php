@@ -58,7 +58,7 @@ class ApiService
         $decoded = json_decode($response, true);
         
         if (json_last_error() !== JSON_ERROR_NONE) {
-            throw new Exception("JSON Decode Error: " . json_last_error_msg());
+            throw new Exception("JSON Decode Error: " . json_last_error_msg() . " - Raw: " . substr(strip_tags($response), 0, 100));
         }
 
         return $decoded;
