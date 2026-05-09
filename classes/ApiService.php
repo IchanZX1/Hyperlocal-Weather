@@ -13,8 +13,9 @@ class ApiService
         curl_setopt($ch, CURLOPT_HEADER, false);
         // Fix SSL Certificate issue
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($ch, CURLOPT_PROXY, "http://ip.atlantic-server.com:64433/");
         curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36");
-        // curl_setopt($ch, CURLOPT_CAINFO, 'C:\laragon\bin\php\php-8.2.30-Win32-vs16-x64\cacert.pem');
 
         $response = curl_exec($ch);
 
@@ -37,6 +38,8 @@ class ApiService
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($ch, CURLOPT_PROXY, "http://ip.atlantic-server.com:64433/");
         curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
@@ -66,7 +69,7 @@ class ApiService
         }
 
         $decoded = json_decode($response, true);
-        
+
         if (json_last_error() !== JSON_ERROR_NONE) {
             throw new Exception("JSON Decode Error: " . json_last_error_msg() . " - Raw: " . substr(strip_tags($response), 0, 100));
         }
