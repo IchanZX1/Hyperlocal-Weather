@@ -74,15 +74,25 @@ class BackgroundSet
     {
         $condition = strtolower($condition);
         
-        if (strpos($condition, 'hujan') !== false || strpos($condition, 'rain') !== false) {
+        // Kategori HUJAN
+        if (
+            strpos($condition, 'hujan') !== false || 
+            strpos($condition, 'rain') !== false || 
+            strpos($condition, 'gerimis') !== false || 
+            strpos($condition, 'petir') !== false || 
+            strpos($condition, 'storm') !== false
+        ) {
             return 'HUJAN';
         }
         
+        // Kategori MENDUNG
         if (
             strpos($condition, 'mendung') !== false || 
             strpos($condition, 'awan') !== false || 
             strpos($condition, 'cloudy') !== false || 
-            strpos($condition, 'overcast') !== false
+            strpos($condition, 'overcast') !== false || 
+            strpos($condition, 'kabut') !== false || 
+            strpos($condition, 'fog') !== false
         ) {
             return 'MENDUNG';
         }
@@ -90,3 +100,4 @@ class BackgroundSet
         return 'CERAH';
     }
 }
+

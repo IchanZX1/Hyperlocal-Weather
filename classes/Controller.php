@@ -20,13 +20,25 @@ class Controller
         }
     }
 
-    public function getWeatherByLocation($kab, $kec, $desa)
+    public function getWeatherByLocation($kab, $kec, $desa, $prov = '')
     {
         try {
-            $weatherData = $this->apiService->getWeatherByLocation($kab, $kec, $desa);
+            $weatherData = $this->apiService->getWeatherByLocation($kab, $kec, $desa, $prov);
             return $weatherData;
         } catch (Exception $e) {
             return ['error' => $e->getMessage()];
         }
     }
+
+    public function getWeatherByCoords($lat, $lon)
+    {
+        try {
+            $weatherData = $this->apiService->getWeatherByCoords($lat, $lon);
+            return $weatherData;
+        } catch (Exception $e) {
+            return ['error' => $e->getMessage()];
+        }
+    }
+
+
 }

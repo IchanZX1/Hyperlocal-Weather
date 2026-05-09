@@ -5,11 +5,31 @@ require_once __DIR__ . '/../classes/background-set.php';
 $controller = new Controller();
 
 // Default location
-$kab = $_GET['kab'] ?? 'Jember';
-$kec = $_GET['kec'] ?? 'Sumbersari';
-$desa = $_GET['desa'] ?? 'Mastrip';
+$kab = $_GET['kab'] ?? null;
+$kec = $_GET['kec'] ?? null;
+$desa = $_GET['desa'] ?? null;
+$prov = $_GET['prov_name'] ?? null;
+$lat = $_GET['lat'] ?? null;
+$lon = $_GET['lon'] ?? null;
 
-$weatherResponse = $controller->getWeatherByLocation($kab, $kec, $desa);
+if ($lat && $lon) {
+    $weatherResponse = $controller->getWeatherByCoords($lat, $lon);
+    // For display purposes, try to get names if they aren't provided
+    if (!$kab) {
+        $kab = $weatherResponse['lokasi']['kabupaten'] ?? 'Lokasi';
+        $kec = $weatherResponse['lokasi']['kecamatan'] ?? 'Sekitar';
+        $desa = $weatherResponse['lokasi']['desa'] ?? 'Anda';
+    }
+} else {
+    // Default to Jember if nothing selected
+    $kab = $kab ?? 'Jember';
+    $kec = $kec ?? 'Sumbersari';
+    $desa = $desa ?? 'Mastrip';
+    $prov = $prov ?? 'Jawa Timur';
+    $weatherResponse = $controller->getWeatherByLocation($kab, $kec, $desa, $prov);
+}
+
+
 
 if (is_array($weatherResponse) && isset($weatherResponse['status']) && $weatherResponse['status'] === true) {
     $loc = $weatherResponse['lokasi'];
