@@ -6,7 +6,8 @@ class ApiService
 
     public function __construct()
     {
-        $this->cacheFile = __DIR__ . '/wilayah_cache.json';
+        // Gunakan sys_get_temp_dir() agar file cache bisa ditulis di Vercel (/tmp)
+        $this->cacheFile = sys_get_temp_dir() . '/wilayah_cache.json';
         date_default_timezone_set('Asia/Jakarta');
     }
 
