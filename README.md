@@ -1,5 +1,4 @@
-# CLAUDE.md
-
+<img src="./assets/image.jpg" width="100%" alt="Zoom Weather - By IchanZX">
 ## Ringkasan Proyek
 
 Proyek ini adalah aplikasi web cuaca bernama **ZoomWeather** berbasis PHP native. Aplikasi menampilkan prakiraan cuaca berdasarkan lokasi pengguna, baik dari koordinat browser maupun pilihan wilayah Indonesia sampai level desa.
